@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <p class="small-title">SMART</p>
+                <h1>Calculator</h1>
+            </div>
+
+            <div class="calculator-icon">
+                ✦
+            </div>
+        </header>
+
+
+        <!-- Calculator -->
+        <section class="calculator">
+
+            <!-- Display -->
+            <div class="display">
+
+                <div class="display-top">
+                    <span id="previous-operand"></span>
+                    <span class="live">LIVE</span>
+                </div>
+
+                <div id="current-operand" class="current-operand">
+                    0
+                </div>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="buttons">
+
+                <!-- Row 1 -->
+                <button
+                    class="button function span-two"
+                    onclick="clearCalculator()">
+                    AC
+                </button>
+
+                <button
+                    class="button function"
+                    onclick="deleteNumber()">
+                    DEL
+                </button>
+
+                <button
+                    class="button operator"
+                    onclick="chooseOperation('%')">
+                    %
+                </button>
+
+
+                <!-- Row 2 -->
+                <button
+                    class="button number"
+                    onclick="appendNumber('7')">
+                    7
+                </button>
+
+                <button
+                    class="button number"
+                    onclick="appendNumber('8')">
+                    8
+                </button>
+
+                <button
+                    class="button number"
+                    onclick="appendNumber('9')">
+                    9
+                </button>
+
+                <button
+                    class="button operator"
+                    onclick="chooseOperation('÷')">
+                    ÷
+                </button>
+
+
+                <!-- Row 3 -->
+                <button
+                    class="button number"
+                    onclick="appendNumber('4')">
+                    4
+                </button>
+
+                <button
+                    class="button number"
+                    onclick="appendNumber('5')">
+                    5
+                </button>
+
+                <button
+                    class="button number"
+                    onclick="appendNumber('6')">
+                    6
+                </button>
+
+                <button
+                    class="button operator"
+                    onclick="chooseOperation('×')">
+                    ×
+                </button>
+
+
+                <!-- Row 4 -->
+                <button
+                    class="button number"
+                    onclick="appendNumber('1')">
+                    1
+                </button>
+
+                <button
+                    class="button number"
+                    onclick="appendNumber('2')">
+                    2
+                </button>
+
+                <button
+                    class="button number"
+                    onclick="appendNumber('3')">
+                    3
+                </button>
+
+                <button
+                    class="button operator"
+                    onclick="chooseOperation('-')">
+                    −
+                </button>
+
+
+                <!-- Row 5 -->
+                <button
+                    class="button number zero"
+                    onclick="appendNumber('0')">
+                    0
+                </button>
+
+                <button
+                    class="button number"
+                    onclick="appendNumber('.')">
+                    .
+                </button>
+
+                <button
+                    class="button equals"
+                    onclick="compute()">
+                    =
+                </button>
+
+                <button
+                    class="button operator"
+                    onclick="chooseOperation('+')">
+                    +
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            <span>Nova Calculator</span>
+            <span>•</span>
+            <span>Keyboard Enabled</span>
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
